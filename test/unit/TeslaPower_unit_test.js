@@ -15,4 +15,11 @@ describe('Tesla (proxy)', function () {
     it('retrieve a value previously initialized', async function () {
         expect((await tesla.retrieveHorsePower()).toString()).to.equal('600')
     })
+    it('upgrades', async function () {
+        const TeslaV2 = await ethers.getContractFactory("TeslaPowerV2")
+        teslaV2 = await upgrades.upgradeProxy(tesla.address, TeslaV2)
+        await teslaV2.incrementHorsePower()
+        let result = await teslaV2.retrieveHorsePower()
+        expect(result).to.equal('601')
+    })
 })
