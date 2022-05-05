@@ -25,7 +25,12 @@ cd hardhat-simple-storage
 - Add OpenZeppeling library:
 ```bash
 cd hardhat-simplestorage
-yarn add @openzeppelin/hardhat-upgrades
+yarn add @openzeppelin/hardhat-upgrades @nomiclabs/hardhat-ethers
+```
+
+- Add require in `hardhat.config.js` file:
+```bash
+require('@openzeppelin/hardhat-upgrades')
 ```
 
 ## Build

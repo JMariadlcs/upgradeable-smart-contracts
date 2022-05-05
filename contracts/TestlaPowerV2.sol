@@ -1,6 +1,8 @@
 pragma solidity 0.8.7;
 
-contract TeslaPower {
+// UPDATED VERSION OF TeslaPower.sol
+
+contract TeslaPowerV2 {
     uint256 private horsePower;
 
     event HorsePowerChanged(uint256 newValue);
@@ -12,5 +14,9 @@ contract TeslaPower {
 
     function retrieveHorsePower() public view returns(uint256) {
         return horsePower;
+    }
+
+    function incrementHorsePower() public {
+        horsePower++;
     }
 }
