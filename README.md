@@ -24,15 +24,24 @@ cd hardhat-simple-storage
 
 - Add OpenZeppeling library:
 ```bash
-yarn add @nomiclabs/hardhat-ethers
+cd hardhat-simplestorage
+yarn add @openzeppelin/hardhat-upgrades
 ```
 
 ## Build
 As hardhat-starter-kit is a cloned repo can not be committed so I am uploading the modified contracts and tests also by separately.
 
-- Create your [contract](https://github.com/JMariadlcs/upgradeable-smart-contracts/blob/main/contracts/TeslaPower.sol)
+1. Create your [contract](https://github.com/JMariadlcs/upgradeable-smart-contracts/blob/main/contracts/TeslaPower.sol)
 
-- Create [unit test](https://github.com/JMariadlcs/upgradeable-smart-contracts/blob/main/test/unit/TeslaPower_unit_test.js)
+2. Create [unit test](https://github.com/JMariadlcs/upgradeable-smart-contracts/blob/main/test/unit/TeslaPower_unit_test.js)
+
+## Run
+
+- To run tests:
+```bash
+cd hardhat-starter-kit
+yarn hardhat test
+```
 
 ## Resources
 - [Proxys by Openzeppeling](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/proxy): Used to 'upgrade' Smart Contracts.
